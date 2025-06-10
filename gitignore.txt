@@ -1,0 +1,60 @@
+# Virtual ENV
+venv*/
+
+# Django Settings / ENV
+.env
+*.log
+*.pot
+*.pyc
+
+# Media / Static / Logs
+error_log.txt
+logs/
+staticfiles/
+media/
+config/logs/
+
+# Database (just in case)
+*.sqlite3
+
+# Python cache / build
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+celerybeat-schedule
+celerybeat.pid
+
+# Coverage
+.coverage
+htmlcov/
+.tox/
+
+# Testing
+.pytest_cache/
+
+# Type checker
+.mypy_cache/
+.dmypy.json
+
+# Notes
+notes.txt
+*/notes.txt
+
+# Editor swap/backup
+*~
+*.bak
+*.tmp
+*.swp
+
+# IDEs
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+Thumbs.db

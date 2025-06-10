@@ -1,0 +1,33 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+{#    <div class="">#}
+
+        <div class=" jumbotron ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Please login:</h2>
+                        {%  if form.errors %}
+                            <p>Your username and password didn't match.  Please try again</p>
+                        {% endif %}
+
+                        <form action="{% url 'account:login' %}" method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy}}
+                            <input type="submit" class="btn btn-primary mt-3" value="login">
+                            <input type="hidden" name="next" value="{{next}}">
+                        </form>
+                        <div class="mt-3">
+                            <h5>Don't have an account?  <a href="{%  url 'account:register' %}">Register</a></h5>
+                            <h5>Forgot Password?  <a href="{%  url 'account:reset_password' %}">Password Reset</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{#    </div>#}
+
+{% endblock %}

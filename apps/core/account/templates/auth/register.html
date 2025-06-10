@@ -1,0 +1,22 @@
+{% extends 'base/base.html' %}
+{% load crispy_forms_filters %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="container jumbotron register_form mt-5 py-2">
+
+        {%  if form.errors %}
+            {{ errors }}
+        {% endif %}
+    <h1 class="text-center ">Account Registration</h1>
+    <hr>
+       <form method="POST" action="">
+           {% csrf_token %}
+            {{ form|crispy }}
+{#           {{ form.confirm_email }}#}
+            <input type="submit" name="Create User" class="btn btn-primary my-3">
+
+    </form>
+    <h5>Already have an account?  <a href="{%  url 'account:login' %}">Login</a></h5>
+    </div>
+{% endblock %}

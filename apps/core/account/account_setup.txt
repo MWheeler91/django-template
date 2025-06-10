@@ -1,0 +1,7 @@
+Add the below lines to the settings.py file
+
+AUTH_USER_MODEL = 'account.User'
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.AllowAllUsersModelBackend',
+    'account.backends.CaseInsensitiveModelBackend'
+)

@@ -1,0 +1,31 @@
+# Set this using `make secret`
+SECRET_KEY='_jwnm)p&%wnoee#^6vy=bm#w-^=+zkreyv_^a0j5n6_7ddk!ql'
+
+# dev or prod
+ENVIRONMENT=dev
+
+# Database
+DB_HOST=''
+DB_PORT=''
+
+#PROD
+DEBUG_PROD=True
+ALLOWED_HOSTS_PROD=''
+CORS_ALLOWED_ORIGINS_PROD=''
+DB_NAME=''
+DB_USER=''
+DB_PASSWORD=''
+
+
+#DEV
+DEBUG_DEV=True
+ALLOWED_HOSTS_DEV=''
+CORS_ALLOWED_ORIGINS_DEV=''
+DB_NAME_TEST=''
+DB_USER_TEST=''
+DB_PASSWORD_TEST=''
+
+
+
+
+
